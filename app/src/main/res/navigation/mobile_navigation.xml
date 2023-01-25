@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="at.htlwels.klackl.timerecording.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="at.htlwels.klackl.timerecording.ui.taskEditor.TaskEditorFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_task_editor" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_createTaskFragment"
+            app:destination="@id/navigation_createTaskFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_editTaskFragment"
+            app:destination="@id/navigation_editTaskFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_timeRecordingFragment"
+            app:destination="@id/navigation_timeRecordingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_createTaskFragment"
+        android:name="at.htlwels.klackl.timerecording.ui.taskEditor.actions.CreateTaskFragment"
+        android:label="Create Task"
+        tools:layout="@layout/fragment_create_task" />
+    <fragment
+        android:id="@+id/navigation_editTaskFragment"
+        android:name="at.htlwels.klackl.timerecording.ui.taskEditor.actions.EditTaskFragment"
+        android:label="Edit Task"
+        tools:layout="@layout/fragment_edit_task" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_timeRecordingFragment"
+        android:name="at.htlwels.klackl.timerecording.ui.timeRecording.TimeRecordingFragment"
+        android:label="fragment_time_recording"
+        tools:layout="@layout/fragment_time_recording" >
+        <action
+            android:id="@+id/action_navigation_timeRecordingFragment_to_createRecordingFragment"
+            app:destination="@id/navigation_createRecordingFragment" />
+        <action
+            android:id="@+id/action_navigation_timeRecordingFragment_to_editRecordingFragment"
+            app:destination="@id/navigation_editRecordingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_editRecordingFragment"
+        android:name="at.htlwels.klackl.timerecording.ui.timeRecording.actions.EditRecordingFragment"
+        android:label="Edit Recording"
+        tools:layout="@layout/fragment_edit_recording" />
+    <fragment
+        android:id="@+id/navigation_createRecordingFragment"
+        android:name="at.htlwels.klackl.timerecording.ui.timeRecording.actions.CreateRecordingFragment"
+        android:label="Create Recording"
+        tools:layout="@layout/fragment_create_recording" />
+
+
+</navigation>

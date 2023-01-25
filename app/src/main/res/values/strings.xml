@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Time Recording</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Dashboard</string>
+    <string name="title_dashboard">Task Editor</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="database_name">app_database</string>
+    <string name="start_recording">start recording</string>
+    <string name="stop_recording">stop recording</string>
+    <string name="LOGGING_TAG_ERROR">LOG_ERROR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
